@@ -4,6 +4,7 @@
   "description": "Gql server for e-commerce",
   "main": "dist/index.js",
   "scripts": {
+    "start":"node ./dist/index.js",
     "start:dev": "tsc-watch  --project . --onSuccess \"npm run nodemon\"",
     "nodemon": "nodemon ./dist/index.js",
     "lint": "tslint --project tsconfig.json",
