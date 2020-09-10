@@ -1,7 +1,7 @@
 {
-  "name": "weblog-svc",
+  "name": "e-commerce",
   "version": "1.0.0",
-  "description": "Gql server for e-co",
+  "description": "Gql server for e-commerce",
   "main": "dist/index.js",
   "scripts": {
     "start:dev": "tsc-watch  --project . --onSuccess \"npm run nodemon\"",
