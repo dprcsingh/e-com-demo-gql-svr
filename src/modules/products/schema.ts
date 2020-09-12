@@ -3,16 +3,22 @@ const products = gql`
   type ProductResponse {
     status: Int
     message: String
+    totalCount: Int
     data: [Product]
   }
   type Product {
     id: String
     name: String
     brand: String
-    imgUrl: String
+    imageUrl: String
     description: String
     price: Int
     size: [Int]
+    theme: Theme
+  }
+  type Theme {
+    background: String
+    color: String
   }
 `;
 
