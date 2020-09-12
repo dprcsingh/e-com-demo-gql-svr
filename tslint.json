@@ -1,0 +1,17 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended"],
+  "jsRules": {},
+  "rules": {
+    "class-name": true,
+    "quotemark": [true, "single", "avoid-escape"],
+    "semicolon": [true, "always"],
+    "no-trailing-whitespace": false,
+    "comment-format": [true, "check-space"],
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "trace"]
+    }
+  },
+  "rulesDirectory": []
+}
