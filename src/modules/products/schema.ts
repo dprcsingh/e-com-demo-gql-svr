@@ -12,7 +12,8 @@ const products = gql`
     brand: String
     imageUrl: String
     description: String
-    price: Int
+    price: String
+    isBanner: Boolean
     size: [Int]
     theme: Theme
   }
