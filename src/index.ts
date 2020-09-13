@@ -6,9 +6,11 @@ import { schemaArray } from './schemaArray';
 import { ApolloServer } from 'apollo-server-express';
 import express from 'express';
 import config from './config/configuration';
+import cors from 'cors';
 const typeDefs = mergeTypeDefs(schemaArray);
 const resolvers = mergeResolver(modules);
 const app = express();
+
 const mongoUrl =
   'mongodb+srv://user:user@cluster0.5vxwh.mongodb.net/e-com?retryWrites=true&w=majority';
 let db: any;
@@ -33,6 +35,7 @@ const server = new ApolloServer({
 
 const { port } = config;
 server.applyMiddleware({ app, path: '/', cors: true });
+app.use(cors());
 
 app.listen(port, () =>
   console.log(`🚀 Server ready at http://localhost:8080${server.graphqlPath}`)
